@@ -3,7 +3,7 @@ import dotenv from 'dotenv';
 import routes from './base/routes';
 
 /**
- * This file is the root entry point for your Rooty server.
+ * This file is the root entry point for your RootyJS server.
  * You never have to change anything in here!
  */
 
@@ -22,5 +22,5 @@ server.listen(process.env.PORT || 3000, (err, address) => {
 		server.log.error(err);
 		process.exit(1);
 	}
-	console.log(`Rooty server listening at: ${address}`);
+	console.log(`RootyJS server listening at: ${address}`);
 });
