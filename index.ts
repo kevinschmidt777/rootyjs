@@ -1,14 +1,17 @@
 import fastify from 'fastify';
+import dotenv from 'dotenv';
+import routes from './base/routes';
 
-require('dotenv').config();
+// Load the .env environment variables
+dotenv.config();
+
+// Create fastify instance
 const server = fastify();
 
-// Declare a route
-server.get('/', (request, reply) => {
-	reply.send({ hello: 'world' });
-});
+// Load the routes
+server.register(routes);
 
-// Run the server!
+// Run the server
 server.listen(process.env.PORT || 3000, (err, address) => {
 	if (err) {
 		server.log.error(err);
