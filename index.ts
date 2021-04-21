@@ -2,6 +2,11 @@ import fastify from 'fastify';
 import dotenv from 'dotenv';
 import routes from './base/routes';
 
+/**
+ * This file is the root entry point for your Rooty server.
+ * You never have to change anything in here!
+ */
+
 // Load the .env environment variables
 dotenv.config();
 
