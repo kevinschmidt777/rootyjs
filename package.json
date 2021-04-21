@@ -1,7 +1,7 @@
 {
 	"name": "rootyjs",
 	"version": "0.1.0",
-	"description": "",
+	"description": "RootyJS is a Node.js framework for building modern APIs. Written in TypeScript and based on Fastify.",
 	"main": "./dist/index.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
@@ -10,10 +10,15 @@
 		"start-production": "node ./dist/index.js"
 	},
 	"keywords": [
-		"rooty"
+		"rooty, rootyjs, node, nodejs, express, fastify, api, fast, performance, framework"
 	],
+	"homepage": "https://rootyjs.com",
 	"author": "Kevin Schmidt",
 	"license": "ISC",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/kevinschmidt777/rootyjs.git"
+	},
 	"prettier": {
 		"printWidth": 120,
 		"tabWidth": 4,
