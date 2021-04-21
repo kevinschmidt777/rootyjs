@@ -3,7 +3,7 @@ import testController from '../controllers/test';
 import authMiddleware from '../middlewares/auth';
 
 /**
- * Routes contains all available routes for your Rooty API server.
+ * "Routes" contains all available routes for your Rooty API server.
  * They will redirect the request to a specific controller.
  * The controller will handle the request and return something.
  * @param fastify
