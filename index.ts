@@ -1,5 +1,6 @@
 import fastify from 'fastify';
 
+require('dotenv').config();
 const server = fastify();
 
 // Declare a route
@@ -8,7 +9,7 @@ server.get('/', (request, reply) => {
 });
 
 // Run the server!
-server.listen(process.env.PORT || 3001, (err, address) => {
+server.listen(process.env.PORT || 3000, (err, address) => {
 	if (err) {
 		server.log.error(err);
 		process.exit(1);

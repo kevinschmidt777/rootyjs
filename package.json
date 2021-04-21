@@ -26,6 +26,7 @@
 		"arrowParens": "always"
 	},
 	"dependencies": {
+		"dotenv": "^8.2.0",
 		"fastify": "3.14.2"
 	},
 	"devDependencies": {
