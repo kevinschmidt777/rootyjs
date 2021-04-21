@@ -19,6 +19,9 @@
 		"type": "git",
 		"url": "https://github.com/kevinschmidt777/rootyjs.git"
 	},
+	"bugs": {
+		"url": "https://github.com/kevinschmidt777/rootyjs/issues"
+	},
 	"prettier": {
 		"printWidth": 120,
 		"tabWidth": 4,
