@@ -3,7 +3,6 @@ import { Sequelize } from 'sequelize';
 /**
  * Init the Sequelize database instance separately.
  * Workaround, to import it into other files (models etc.).
- * Please fill in your Database connection here!
  */
 
 const databaseHost = 'localhost';

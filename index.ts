@@ -3,7 +3,7 @@ import dotenv from 'dotenv';
 import cors from './base/cors';
 import routes from './base/routes';
 import database from './base/database';
-import { systemSettings } from './base/system';
+import { systemConfig } from './config';
 
 /**
  * This file is the root entry point for your RootyJS server.
@@ -26,19 +26,13 @@ server.register(routes);
 server.register(database);
 
 // Run the server
-server.listen(systemSettings.serverPort, (err, address) => {
-	// Something wrong?
-	if (err) {
-		server.log.error(err);
+server
+	.listen(systemConfig.serverPort)
+	.then((address) => console.log('RootyJS server listening at: ' + address))
+	.catch((error) => {
+		server.log.error(error);
 		process.exit(1);
-	}
-
-	// Set timezone
-	process.env.TZ = systemSettings.timezone;
-
-	// Return log
-	console.log(`RootyJS server listening at: ${address}`);
-});
+	});
 
 // Export server instance for tests
 export default server;
