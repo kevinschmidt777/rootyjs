@@ -2,14 +2,13 @@ import { FastifyInstance } from 'fastify';
 
 /**
  * Configuration for CORS (Cross-Origin Resource Sharing).
- * By default, "localhost" is allowed for CORS requests.
- * For production: add your server and client addresses here as "origins".
- * If you want to allow any origin, simply set origin to "*" string.
+ * By default, CORS is allowed for all origins.
+ * For production: add your client addresses here as an origins array: ['http://myFancyClient.com', ...].
  * @param fastify
  */
 const cors = async (fastify: FastifyInstance) => {
 	fastify.register(require('fastify-cors'), {
-		origin: ['http://localhost'],
+		origin: '*',
 		methods: ['GET', 'POST', 'PATCH', 'PUT', 'DELETE'],
 	});
 };
