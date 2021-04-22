@@ -2,6 +2,7 @@ import fastify from 'fastify';
 import dotenv from 'dotenv';
 import cors from './base/cors';
 import routes from './base/routes';
+import database from './base/database';
 
 /**
  * This file is the root entry point for your RootyJS server.
@@ -19,6 +20,9 @@ server.register(cors);
 
 // Load the routes
 server.register(routes);
+
+// Connect the database
+server.register(database);
 
 // Run the server
 server.listen(process.env.PORT || 3000, (err, address) => {
