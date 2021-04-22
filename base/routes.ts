@@ -1,5 +1,5 @@
 import { FastifyInstance } from 'fastify';
-import authMiddleware from '../middlewares/auth';
+// import authMiddleware from '../middlewares/auth';
 import homeController from '../controllers/home';
 
 /**
@@ -9,7 +9,8 @@ import homeController from '../controllers/home';
  * @param fastify
  */
 const routes = async (fastify: FastifyInstance) => {
-	fastify.get('/', { preHandler: [authMiddleware] }, homeController.index);
+	fastify.get('/', homeController.index);
+	// fastify.get('/', { preHandler: [authMiddleware] }, homeController.index);
 };
 
 export default routes;
