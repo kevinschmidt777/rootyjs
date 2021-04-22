@@ -24,3 +24,6 @@ server.listen(process.env.PORT || 3000, (err, address) => {
 	}
 	console.log(`RootyJS server listening at: ${address}`);
 });
+
+// Export server instance for tests
+export default server;
