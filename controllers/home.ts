@@ -6,7 +6,7 @@ import User from '../models/user';
  */
 class homeController {
 	static async index(request: FastifyRequest, reply: FastifyReply) {
-		// Test INsert User
+		// Insert Test User
 		await User.create({
 			email: 'kevin@kevinschmidt.info',
 			password: 'TestPw',
