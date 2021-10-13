@@ -2,4 +2,6 @@
 /.idea
 /dist
 /.nyc_output
+/prisma/migrations
 .env
+package-lock.json

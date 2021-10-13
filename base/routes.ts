@@ -1,6 +1,6 @@
 import { FastifyInstance } from 'fastify';
 // import authMiddleware from '../middlewares/auth';
-import homeController from '../controllers/home';
+import HomeController from '../controllers/home';
 
 /**
  * "Routes" contains all available routes for your Rooty API server.
@@ -9,7 +9,7 @@ import homeController from '../controllers/home';
  * @param fastify
  */
 const routes = async (fastify: FastifyInstance) => {
-	fastify.get('/', homeController.index);
+	fastify.get('/', HomeController.index);
 	// fastify.get('/', { preHandler: [authMiddleware] }, homeController.index);
 };
 

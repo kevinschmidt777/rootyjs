@@ -2,8 +2,6 @@ import fastify from 'fastify';
 import dotenv from 'dotenv';
 import cors from './base/cors';
 import routes from './base/routes';
-import database from './base/database';
-import { systemConfig } from './config';
 
 /**
  * This file is the root entry point for your RootyJS server.
@@ -22,12 +20,10 @@ server.register(cors);
 // Load the routes
 server.register(routes);
 
-// Connect the database
-server.register(database);
-
 // Run the server
 server
-	.listen(systemConfig.serverPort)
+	// @ts-ignore
+	.listen(process.env.SERVER_PORT)
 	.then((address) => console.log('RootyJS server listening at: ' + address))
 	.catch((error) => {
 		server.log.error(error);
