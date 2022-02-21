@@ -14,15 +14,9 @@ model Users {
 id String @default(uuid()) @id
 email String @unique
 password String
-firstName String?
-lastName String?
 createdAt DateTime @default(now())
 updatedAt DateTime @updatedAt
-lastLogin DateTime?
 tokens Tokens[]
-twoFactorAuth Boolean @default(false)
-twoFactorCode String?
-rights UsersRights[]
 }
 
 model Tokens {
@@ -31,21 +25,5 @@ user Users @relation(fields: [userId], references: [id])
 userId String
 token String
 userAgent String
-createdAt DateTime @default(now())
-}
-
-model Rights {
-id String @default(uuid()) @id
-users UsersRights[]
-name String @unique
-createdAt DateTime @default(now())
-}
-
-model UsersRights {
-@@id([userId, rightId])
-user Users @relation(fields: [userId], references: [id])
-userId String
-right Rights @relation(fields: [rightId], references: [id])
-rightId String
 createdAt DateTime @default(now())
 }
