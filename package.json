@@ -1,6 +1,6 @@
 {
   "name": "rootyjs",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "RootyJS is a Node.js framework for building modern APIs. Written in TypeScript and based on Fastify.",
   "main": "./dist/index.js",
   "scripts": {
